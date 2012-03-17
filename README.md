@@ -2,7 +2,7 @@
 
 ## Purpose
 
-If you're like me it's hard to imagine a productive development environment with a tool like Jenkins.  Part of that, however, is keeping everything up to date and in sync with the real world.  With the addition of the "update site" concept in Jenkins this became a lot easier for instances hosted in a place with reliable internet connectivity.  Locations without internet connectivity are basically left to their own devices to manually find, download, and update both Jenkins and relevant plugins on their own.
+If you're like me it's hard to imagine a productive development environment without a tool like Jenkins.  Part of that, however, is keeping everything up to date and in sync with the real world.  With the addition of the "update site" concept in Jenkins this became a lot easier for instances hosted in a place with reliable internet connectivity.  Locations without internet connectivity are basically left to their own devices to manually find, download, and update both Jenkins and relevant plugins on their own.
 
 ## Enter JenkinsUpdateSite
 
@@ -17,7 +17,7 @@ The script requires Python 2.6 or later and the following tools must be availabl
 
 ## Instructions
 
-Create a new directory to use for the purpose of managing the update site repository.  Don't run this script on your desktop or any folder containing other files or they will be packaged up with your mirror as well.  Simply run JenkinsUpdateSite.py on the command line with the path to your update site as the only argument
+Create a new directory to use for the purpose of managing the update site repository.  Don't run this script on your desktop or any folder containing other files or they will be packaged up with your mirror as well.  Simply run JenkinsUpdateSite.py on the command line with the path to your update site as the only argument:
 
     $> python JenkinsUpdateSite.py http://mirrors.xmission.com/jenkins/
 
