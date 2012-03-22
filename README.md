@@ -17,9 +17,9 @@ The script requires Python 2.6 or later and the following tools must be availabl
 
 ## Instructions
 
-Create a new directory to use for the purpose of managing the update site repository.  Don't run this script on your desktop or any folder containing other files or they will be packaged up with your mirror as well.  Simply run JenkinsUpdateSite.py on the command line with the path to your update site as the only argument:
+Create a new directory to use for the purpose of managing the update site repository.  Don't run this script on your desktop or any folder containing other files or they will be packaged up with your mirror as well.  Simply run JenkinsUpdateSite.py on the command line with the path to your update site and any of the sections you wish to mirror (e.g. plugins, war, windows, etc.).  The updates and art directories will be selected by default so you don't need to select them.  An example call mirroring the war and plugins directories would be:
 
-    $> python JenkinsUpdateSite.py http://mirrors.xmission.com/jenkins/
+    $> python JenkinsUpdateSite.py http://mirrors.xmission.com/jenkins/ war plugins
 
 ### The First Run
 
@@ -29,7 +29,9 @@ After you have the files transferred, unpack it on a server and point a web serv
 
 ### Update Runs
 
-From this point on you just need to run the script any time you want to produce an update package.  These packages will contain the latest changes since the last time you ran it and will be stored in a patch file stored in the current directory.  Just transfer this patch to your remote network, apply it to the git repository you transferred in your first run, and you're done.  Your Jenkins instance(s) will now have access to the latest goodies from the Jenkins community and you can grab a coffee* (or Mountain Dew**).
+From this point on you just need to run the script any time you want to produce an update package.  These packages will contain the changes since the last time you ran it and will be stored in a patch file stored in the current directory.  Be sure to remove the patch file after you burn it to CD/DVD or it will end up committing it to the git repository next time you run!
+
+Now, just transfer this patch to your remote network, apply it to the git repository you transferred in your first run, and you're done.  Your Jenkins instance(s) will now have access to the latest goodies from the Jenkins community and you can grab a coffee* (or Mountain Dew**).
 
 
 
